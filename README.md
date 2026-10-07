@@ -16,7 +16,8 @@ This document describes how the Within 10 mobile application (“**App**”, “
 - We use your **location** to find places near you and, if you enable it, to alert you when you are close to saved places.
 - We **do not sell** your personal data and **do not show third-party advertising** in the App.
 - **Place search** is powered by **Google Places**; requests go to Google under [Google’s terms and privacy policies](https://policies.google.com/privacy).
-- **Subscriptions** are processed by **Apple App Store** or **Google Play**; we do not receive your full payment card details.
+- **Subscriptions** are processed by **Apple App Store** (iOS) or **Google Play** (Android); we do not receive your full payment card details.
+- On **iPhone and iPad**, **Apple** provides the store, payment, and many system permissions; see [§ Apple privacy and services (iOS)](#apple-privacy-and-services-ios).
 - Most saved data (favourites, cache, settings) stays **on your device** unless you use features that sync a limited trial record to our backend.
 
 ---
@@ -80,9 +81,12 @@ If you save images to your photo library, the App requests photo library permiss
 
 ### 1.7 Purchases
 
-**Within X Pro** and **Within X Pro Max** subscriptions are sold through the **Apple App Store** or **Google Play**. Payment is handled entirely by Apple or Google. We receive purchase tokens / subscription status needed to unlock paid features, not your full payment credentials.
+**Within X Pro** and **Within X Pro Max** subscriptions are sold through the **Apple App Store** (iOS) or **Google Play** (Android). Payment is handled entirely by Apple or Google. We receive purchase tokens / subscription status needed to unlock paid features, not your full payment credentials.
 
-Apple’s terms: [https://www.apple.com/legal/internet-services/itunes/dev/stdeula/](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
+**On iOS**, your subscription is tied to your **Apple ID**. Manage or cancel it in **Settings → [your name] → Subscriptions**. Refunds and billing disputes for App Store purchases are handled by Apple under its policies, not by us directly.
+
+- Apple Standard Licensed Application EULA: [https://www.apple.com/legal/internet-services/itunes/dev/stdeula/](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
+- Apple Media Services Terms: [https://www.apple.com/legal/internet-services/itunes/](https://www.apple.com/legal/internet-services/itunes/)
 
 ### 1.8 Google Places and maps
 
@@ -131,7 +135,8 @@ We share information only with:
 | Recipient | Purpose |
 |-----------|---------|
 | **Google** (Places API, Firebase Auth, Firestore, Analytics, Crashlytics) | Place data, authentication, trial sync, analytics, crashes |
-| **Apple / Google** | In-app purchases and subscription validation |
+| **Apple** (App Store, StoreKit, iOS) | Distribution, subscription billing, subscription status; platform permission UI; on-device biometrics for optional meeting lock |
+| **Google Play** | Android distribution, subscription billing, subscription status |
 | **Service providers** | Hosting and infrastructure strictly necessary to operate Firebase |
 
 We do not authorize these providers to use your data for their own marketing unrelated to providing services to us.
@@ -160,17 +165,58 @@ The App is not directed at children under 13 (or the minimum age in your country
 
 Depending on where you live, you may have rights to **access**, **correct**, **delete**, **restrict**, **object**, or **port** personal data, and to **complain** to a supervisory authority.
 
-To exercise rights or ask questions, contact us (Section 11). For purchases, subscription management, and refunds, use **App Store** or **Google Play** account settings as well.
+To exercise rights or ask questions, contact us (Section 12). For **iOS** billing, refunds, and subscription management, use **Apple** (Section 10). For **Android**, use **Google Play**.
 
 ---
 
-## 10. Changes
+## 10. Apple privacy and services (iOS)
+
+Within 10 is **deployed on iOS** through the [Apple App Store](https://apps.apple.com/). When you use the App on iPhone or iPad, you also interact with **Apple’s platform and services**, which have privacy practices **separate from this policy and from Serge Mbamba (the developer)**.
+
+### 10.1 What Apple provides
+
+- **App distribution and updates** via the App Store.
+- **In-app purchases and auto-renewable subscriptions** via **StoreKit**; Apple processes payment and maintains your subscription relationship with your Apple ID.
+- **System permission dialogs** for location (including background location if you allow it), contacts, photos, notifications, and **Face ID / Touch ID** when you use optional meeting protection. Biometric data is handled **on your device by iOS**; we do not receive your fingerprint or face data.
+- **Optional App Tracking Transparency (ATT)** prompts on some iOS versions if the App requests tracking authorization. We **do not sell your data** and **do not show third-party ads** in the App; you may decline tracking if prompted without losing core place search features.
+
+### 10.2 Apple privacy and legal documents
+
+Read Apple’s own policies for how Apple uses information when you use the App Store, your Apple ID, and iOS:
+
+| Topic | Link |
+|-------|------|
+| Apple Privacy Policy | [https://www.apple.com/legal/privacy/](https://www.apple.com/legal/privacy/) |
+| Apple Privacy (overview) | [https://www.apple.com/privacy/](https://www.apple.com/privacy/) |
+| Control your Apple privacy choices | [https://www.apple.com/privacy/choices/](https://www.apple.com/privacy/choices/) |
+| Apple Media Services Terms | [https://www.apple.com/legal/internet-services/itunes/](https://www.apple.com/legal/internet-services/itunes/) |
+| Standard Licensed Application EULA | [https://www.apple.com/legal/internet-services/itunes/dev/stdeula/](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) |
+| Privacy — App Store & Apple media apps | [https://www.apple.com/legal/privacy/data/en/app-store/](https://www.apple.com/legal/privacy/data/en/app-store/) |
+
+### 10.3 App Store “App Privacy” label
+
+Apple requires a **Privacy Nutrition Label** on our App Store product page. It lists the **types of data** linked to you or used for tracking, based on our disclosures and the App’s behavior (location, identifiers used for trial sync and analytics, etc.). The label is updated when we ship new versions that change data practices. This README is the detailed explanation; the label is the App Store summary.
+
+### 10.4 When to contact Apple vs us
+
+| Your question | Who to contact |
+|---------------|----------------|
+| Subscription charge, refund, or cancel on iPhone/iPad | **Apple** — Settings → Subscriptions, or [Report a Problem](https://reportaproblem.apple.com) |
+| Apple ID, device, or iOS settings | **Apple Support** — [https://support.apple.com/](https://support.apple.com/) |
+| What Within 10 stores, Firebase trial data, or this policy | **Us** — Section 12 (Contact) |
+| Google Places, Firebase, or crash/analytics data we use | **Us** — Section 12; Google policies linked in Section 1 |
+
+Apple is **not** responsible for the Within 10 application or our backend; we are the **data controller** for information described in Sections 1–5 that we (or Firebase on our behalf) process. Apple is an independent **platform and payment provider** for the iOS version.
+
+---
+
+## 11. Changes
 
 We may update this policy when the App or legal requirements change. We will post the new version in this repository and update the “Last updated” date. Continued use after changes means you accept the updated policy.
 
 ---
 
-## 11. Contact
+## 12. Contact
 
 **Privacy questions and requests:**
 
@@ -180,6 +226,6 @@ Please include your platform (iOS/Android), App version (Settings → About), an
 
 ---
 
-## 12. App Store disclosure (short form)
+## 13. App Store disclosure (short form)
 
-**Within 10** uses location to find nearby places and optional proximity alerts; contacts access only when you save or invite; local storage for favourites and cache; Google Places for search; Firebase for anonymous trial sync, analytics, and crash reports; Apple/Google for subscriptions. No sale of personal data. No in-app ads.
+**Within 10 (iOS)** is distributed by Apple’s App Store. **Within 10** uses location to find nearby places and optional proximity alerts; contacts access only when you save or invite; local storage for favourites and cache; Google Places for search; Firebase for anonymous trial sync, analytics, and crash reports; **Apple (StoreKit)** / Google Play for subscriptions. No sale of personal data. No in-app ads. See [§10](#10-apple-privacy-and-services-ios) for Apple’s policies and support paths.
