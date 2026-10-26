@@ -3,7 +3,7 @@
 **Effective date:** 26 October 2026  
 **Applies to:** Within 10 mobile application on **Apple iOS** and **Google Android** (including devices that use Google Mobile Services or, where applicable, Huawei Mobile Services for location).  
 **Package / bundle ID:** `com.serge.mbamba.within10`  
-**Contact:** [https://within10.app](https://within10.app) (support and privacy requests)
+
 
 This Privacy Policy describes how **Within 10** (“**we**”, “**us**”, “**the app**”) collects, uses, stores, and shares information when you use the app. It is written for users in all regions; additional rights may apply depending on where you live (see [Your rights](#your-rights)).
 
@@ -212,7 +212,7 @@ If you use Within 10 outside the country where our service providers host data (
 Depending on your location, you may have the right to **access**, **correct**, **delete**, **restrict**, **object**, or **port** personal data, and to **withdraw consent** where processing is consent-based.
 
 - **In-app:** Clear cache, delete saved items, revoke permissions in Settings, cancel subscriptions in the App Store / Play Store.  
-- **Contact us** via [https://within10.app](https://within10.app) for access or deletion requests related to cloud sync data tied to your anonymous Firebase user (include app platform and approximate install date to help us locate records).
+- **Contact us** via [mailto:chamberton@hotmail.com) for access or deletion requests related to cloud sync data tied to your anonymous Firebase user (include app platform and approximate install date to help us locate records).
 
 **California (CCPA/CPRA):** We do not sell personal information. You may request disclosure or deletion as above.
 
