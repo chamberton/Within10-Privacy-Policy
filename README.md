@@ -1,231 +1,268 @@
 # Within 10 — Privacy Policy
 
-**Last updated:** 7 October 2026  
-**Applies to:** Within 10 (also shown as “Within X” in some screens) on iOS and Android  
-**Developer:** Serge Mbamba  
+**Effective date:** 26 October 2026  
+**Applies to:** Within 10 mobile application on **Apple iOS** and **Google Android** (including devices that use Google Mobile Services or, where applicable, Huawei Mobile Services for location).  
+**Package / bundle ID:** `com.serge.mbamba.within10`  
+**Contact:** [https://within10.app](https://within10.app) (support and privacy requests)
 
-This document describes how the Within 10 mobile application (“**App**”, “**we**”, “**us**”) handles information when you use it. By using the App, you agree to this policy. If you do not agree, please do not use the App.
+This Privacy Policy describes how **Within 10** (“**we**”, “**us**”, “**the app**”) collects, uses, stores, and shares information when you use the app. It is written for users in all regions; additional rights may apply depending on where you live (see [Your rights](#your-rights)).
 
-**Canonical URL:** [https://within10.app/privacy](https://within10.app/privacy) (may point to this repository).  
-**In-app link:** Settings → Privacy policy (loads this policy from the web).
-
----
-
-## Summary
-
-- We use your **location** to find places near you and, if you enable it, to alert you when you are close to saved places.
-- We **do not sell** your personal data and **do not show third-party advertising** in the App.
-- **Place search** is powered by **Google Places**; requests go to Google under [Google’s terms and privacy policies](https://policies.google.com/privacy).
-- **Subscriptions** are processed by **Apple App Store** (iOS) or **Google Play** (Android); we do not receive your full payment card details.
-- On **iPhone and iPad**, **Apple** provides the store, payment, and many system permissions; see [§ Apple privacy and services (iOS)](#apple-privacy-and-services-ios).
-- Most saved data (favourites, cache, settings) stays **on your device** unless you use features that sync a limited trial record to our backend.
+Within 10 helps you discover restaurants, hotels, bars, cafés, and other places near you (or near a location you choose), save favourites, plan trips, set up meetings, receive optional proximity alerts, and use optional on-device features such as food photo insights. **We do not sell your personal information and we do not show advertising in the app.**
 
 ---
 
-## 1. Information we collect and use
+## 1. Who is responsible for your data
 
-### 1.1 Location
-
-When you grant permission, the App uses your device’s location to:
-
-- Search for restaurants, hotels, bars, cafés, and other places within the radius you choose;
-- Show distance and “open now” information;
-- Optionally run **proximity alerts** for places you have saved (including background location if you allow it).
-
-Location is used for these features only. We do not use location to build advertising profiles. You can revoke location access in your device settings at any time; some features will not work without it.
-
-You may also search around a **manually chosen** location (via place autocomplete). That choice is used for search until you switch back to GPS.
-
-### 1.2 Data stored on your device
-
-The App stores data locally on your phone or tablet, including:
-
-- **Saved places and collections** (favourites);
-- **Cached place details** (names, ratings, photos metadata, opening hours, etc.) to speed up browsing and support offline access for saved content (Within X Pro / Pro Max);
-- **App settings** (language, enabled place categories, search radius, theme);
-- **Trial and entitlement state** (start time, last seen, platform) in local storage;
-- **Meeting-related content** you choose to protect (may use device biometrics / secure storage);
-- **Invitation contacts** you add for meeting invitations (stored locally unless you export or share them yourself).
-
-You can clear cached data from Settings where the App provides that option.
-
-### 1.3 Account and trial sync (Firebase)
-
-To enforce a **free trial** and sync trial timing across reinstalls when online, the App may:
-
-- Sign you in with **Firebase Anonymous Authentication** (a random user ID, not your name or email);
-- Write a **trial record** to **Google Cloud Firestore** containing:
-  - A **one-way hash** of a device identifier (the raw identifier is not sent to our servers);
-  - Trial start time and last-seen time;
-  - Platform (`ios` or `android`);
-  - Schema version;
-  - The anonymous Firebase user ID (for access control only).
-
-We do **not** use this to track your real-world movements or to sell data. If sync fails (offline or error), the App falls back to locally stored trial data.
-
-Legacy Firestore collections used by older App versions are **denied** by current security rules and are not written by current releases.
-
-### 1.4 Analytics and diagnostics
-
-We use **Firebase Analytics** for aggregated usage events (for example, place category searches and some feature usage). We use **Firebase Crashlytics** to collect crash logs and technical diagnostics to fix bugs. These services are provided by Google; they may receive device and app version information as described in [Google’s privacy documentation](https://firebase.google.com/support/privacy).
-
-We configure crash reporting to be **disabled in debug builds** where applicable. We avoid logging API keys or precise location in crash reports.
-
-### 1.5 Contacts
-
-If you use **save to contacts** or **meeting invitations**, the App may access your address book **only when you initiate that action**. Contact data you select is used to create or update contacts on your device or to compose invitations; we do not upload your full address book to our servers.
-
-### 1.6 Photos
-
-If you save images to your photo library, the App requests photo library permission for that action only.
-
-### 1.7 Purchases
-
-**Within X Pro** and **Within X Pro Max** subscriptions are sold through the **Apple App Store** (iOS) or **Google Play** (Android). Payment is handled entirely by Apple or Google. We receive purchase tokens / subscription status needed to unlock paid features, not your full payment credentials.
-
-**On iOS**, your subscription is tied to your **Apple ID**. Manage or cancel it in **Settings → [your name] → Subscriptions**. Refunds and billing disputes for App Store purchases are handled by Apple under its policies, not by us directly.
-
-- Apple Standard Licensed Application EULA: [https://www.apple.com/legal/internet-services/itunes/dev/stdeula/](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
-- Apple Media Services Terms: [https://www.apple.com/legal/internet-services/itunes/](https://www.apple.com/legal/internet-services/itunes/)
-
-### 1.8 Google Places and maps
-
-Place search, details, photos, and autocomplete are requested from **Google Places API** (and related Google services). Those requests include search parameters and location coordinates needed to return results. Google processes this data under its own policies: [https://policies.google.com/privacy](https://policies.google.com/privacy).
-
-When you tap **Navigate**, **Call**, or **Website**, the App opens your device’s maps, phone, or browser apps; those services have their own privacy terms.
-
-### 1.9 Export
-
-If you use **export data** (paid feature), the App generates a file from data stored on your device and shares it through the system share sheet. We do not receive a copy unless you send it to us yourself.
+The data controller for Within 10 is the developer and publisher of the app (Serge Mbamba / Within 10), reachable via the support URL above. For subscription billing, **Apple** (App Store) and **Google** (Google Play) process payments under their own privacy policies.
 
 ---
 
-## 2. What we do not do
+## 2. Summary
 
-- We **do not sell** your personal information.
-- We **do not display third-party advertising** in the current App (no ad network monetization).
-- We **do not require** a named account, email, or password to use the core App (anonymous auth is used only for trial sync).
-
----
-
-## 3. Legal bases (EEA / UK)
-
-Where GDPR or UK GDPR applies, we rely on:
-
-- **Contract / steps at your request:** providing search, favourites, subscriptions, and features you activate;
-- **Legitimate interests:** security, fraud prevention for trials, analytics and crash fixing in proportion to impact;
-- **Consent:** where required for optional permissions (location, contacts, photos, notifications, background location).
-
-You may withdraw consent for permissions in device settings; withdrawal does not affect processing already performed.
+| Topic | What we do |
+|--------|------------|
+| **Location** | Used to find nearby places, simulate another area, navigation handoff, and (if you enable it) proximity alerts near saved places. Processed on your device; sent to **Google Places** only as needed to search places. |
+| **Saved places & trips** | Stored **locally** on your device by default. Optional **cloud sync** uses Firebase for subscribed / trial users. |
+| **Account** | **Anonymous Firebase sign-in** may be used to support trial and sync—not a public profile. |
+| **Analytics & crashes** | **Firebase Analytics** (usage events) and **Firebase Crashlytics** (crash reports) in production builds. |
+| **On-device AI** | Optional food insights run **on your device**; we do not upload those photos for cloud AI processing. |
+| **Contacts** | Only if **you** invite people to meetings or save a place to contacts—via OS permission. |
+| **Ads / tracking for ads** | **No ads.** On iOS we may ask for **App Tracking Transparency**; the app is designed to work if you decline. |
+| **Children** | Not directed at children under 13 (or local minimum age). |
 
 ---
 
-## 4. Retention
+## 3. Information we collect
 
-- **On-device data** remains until you delete it, clear cache, or uninstall the App.
-- **Firestore trial records** are kept as long as needed to operate the trial and subscription model; you may contact us to request deletion where applicable law gives you that right.
-- **Analytics and crash data** are retained according to Google Firebase default retention settings; we use them only for product improvement.
+### 3.1 Information you provide
 
----
+- **Saved favourites, collections, trips, meeting details, and notes** you create in the app.
+- **Preferences** such as language, theme, place categories, sort order, and notification settings.
+- **Meeting invitations** content you compose (recipients you select from your address book).
+- **Exported data** when you use export features (files are created locally or via share sheets you control).
 
-## 5. Sharing and processors
+### 3.2 Information collected automatically
 
-We share information only with:
+- **Precise and coarse location** (GPS and related signals) when you grant permission—while using the app and, if you opt in on Android/iOS, **in the background** for proximity alerts.
+- **Simulated / manual location** when you choose to explore another area (treated like location for place searches).
+- **Device and app identifiers** needed for subscriptions, trial eligibility, sync, and diagnostics—for example installation-scoped identifiers via Firebase and platform billing IDs (handled by Apple/Google for purchases).
+- **Usage and performance data** via Firebase Analytics (e.g. searches, feature events) and Crashlytics (stack traces, device model, OS version).
+- **Network and connectivity** status to load place data and sync when online.
+- **Remote configuration** values from Firebase Remote Config (feature flags, limits)—no personal content.
 
-| Recipient | Purpose |
-|-----------|---------|
-| **Google** (Places API, Firebase Auth, Firestore, Analytics, Crashlytics) | Place data, authentication, trial sync, analytics, crashes |
-| **Apple** (App Store, StoreKit, iOS) | Distribution, subscription billing, subscription status; platform permission UI; on-device biometrics for optional meeting lock |
-| **Google Play** | Android distribution, subscription billing, subscription status |
-| **Service providers** | Hosting and infrastructure strictly necessary to operate Firebase |
+### 3.3 Information from third-party services
 
-We do not authorize these providers to use your data for their own marketing unrelated to providing services to us.
+- **Google Places / Maps APIs:** When you search or open place details, we send queries that include **location coordinates** (your real or simulated location) and place identifiers to Google to retrieve listings, photos, ratings, hours, and similar **public business information**. Google’s use of data is governed by [Google’s Privacy Policy](https://policies.google.com/privacy) and [Google Maps Platform Terms](https://cloud.google.com/maps-platform/terms).
+- **Apple / Google Play:** Subscription status, receipts, and refund handling are processed by the store; we receive entitlement signals, not your full payment card number.
 
----
+### 3.4 Information we do not collect for advertising
 
-## 6. International transfers
-
-Firebase and Google services may process data in the United States and other countries. Where required, we rely on appropriate safeguards (such as standard contractual clauses offered by Google for Firebase).
-
----
-
-## 7. Security
-
-We use industry-standard measures including encrypted transport (HTTPS), Firestore security rules, hashed device identifiers for trial documents, and platform secure storage where available. No method of transmission or storage is 100% secure.
+We do **not** use your data to serve third-party ads or to build advertising profiles. We do **not** sell personal information.
 
 ---
 
-## 8. Children
+## 4. How we use information
 
-The App is not directed at children under 13 (or the minimum age in your country). We do not knowingly collect personal information from children. If you believe a child has provided us data, contact us and we will take appropriate steps to delete it.
+We use information to:
 
----
+1. **Provide core functionality** — show nearby places, maps, details, navigation links, favourites, trips, and meetings.  
+2. **Optional proximity notifications** — alert you when you approach a saved place (requires location permission, including background where applicable).  
+3. **Subscriptions and trials** — validate **Within X Pro** / **Within X Pro Max**, free trial windows, and feature limits.  
+4. **Cloud sync (premium-related)** — replicate certain saved data to Firebase Firestore under an anonymous user ID when sync runs.  
+5. **Improve reliability** — crash reporting, error monitoring, and aggregated analytics.  
+6. **Configure the app** — remote config for limits and features without shipping a new store build.  
+7. **On-device food insights** — classify food in photos locally when you request it.  
+8. **Comply with law** and enforce our terms where required.
 
-## 9. Your rights
-
-Depending on where you live, you may have rights to **access**, **correct**, **delete**, **restrict**, **object**, or **port** personal data, and to **complain** to a supervisory authority.
-
-To exercise rights or ask questions, contact us (Section 12). For **iOS** billing, refunds, and subscription management, use **Apple** (Section 10). For **Android**, use **Google Play**.
-
----
-
-## 10. Apple privacy and services (iOS)
-
-Within 10 is **deployed on iOS** through the [Apple App Store](https://apps.apple.com/). When you use the App on iPhone or iPad, you also interact with **Apple’s platform and services**, which have privacy practices **separate from this policy and from Serge Mbamba (the developer)**.
-
-### 10.1 What Apple provides
-
-- **App distribution and updates** via the App Store.
-- **In-app purchases and auto-renewable subscriptions** via **StoreKit**; Apple processes payment and maintains your subscription relationship with your Apple ID.
-- **System permission dialogs** for location (including background location if you allow it), contacts, photos, notifications, and **Face ID / Touch ID** when you use optional meeting protection. Biometric data is handled **on your device by iOS**; we do not receive your fingerprint or face data.
-- **Optional App Tracking Transparency (ATT)** prompts on some iOS versions if the App requests tracking authorization. We **do not sell your data** and **do not show third-party ads** in the App; you may decline tracking if prompted without losing core place search features.
-
-### 10.2 Apple privacy and legal documents
-
-Read Apple’s own policies for how Apple uses information when you use the App Store, your Apple ID, and iOS:
-
-| Topic | Link |
-|-------|------|
-| Apple Privacy Policy | [https://www.apple.com/legal/privacy/](https://www.apple.com/legal/privacy/) |
-| Apple Privacy (overview) | [https://www.apple.com/privacy/](https://www.apple.com/privacy/) |
-| Control your Apple privacy choices | [https://www.apple.com/privacy/choices/](https://www.apple.com/privacy/choices/) |
-| Apple Media Services Terms | [https://www.apple.com/legal/internet-services/itunes/](https://www.apple.com/legal/internet-services/itunes/) |
-| Standard Licensed Application EULA | [https://www.apple.com/legal/internet-services/itunes/dev/stdeula/](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) |
-| Privacy — App Store & Apple media apps | [https://www.apple.com/legal/privacy/data/en/app-store/](https://www.apple.com/legal/privacy/data/en/app-store/) |
-
-### 10.3 App Store “App Privacy” label
-
-Apple requires a **Privacy Nutrition Label** on our App Store product page. It lists the **types of data** linked to you or used for tracking, based on our disclosures and the App’s behavior (location, identifiers used for trial sync and analytics, etc.). The label is updated when we ship new versions that change data practices. This README is the detailed explanation; the label is the App Store summary.
-
-### 10.4 When to contact Apple vs us
-
-| Your question | Who to contact |
-|---------------|----------------|
-| Subscription charge, refund, or cancel on iPhone/iPad | **Apple** — Settings → Subscriptions, or [Report a Problem](https://reportaproblem.apple.com) |
-| Apple ID, device, or iOS settings | **Apple Support** — [https://support.apple.com/](https://support.apple.com/) |
-| What Within 10 stores, Firebase trial data, or this policy | **Us** — Section 12 (Contact) |
-| Google Places, Firebase, or crash/analytics data we use | **Us** — Section 12; Google policies linked in Section 1 |
-
-Apple is **not** responsible for the Within 10 application or our backend; we are the **data controller** for information described in Sections 1–5 that we (or Firebase on our behalf) process. Apple is an independent **platform and payment provider** for the iOS version.
+**Legal bases (EEA/UK):** performance of a contract (providing the app), legitimate interests (security, analytics, product improvement), and **consent** where required (e.g. optional background location, contacts, notifications, ATT on iOS).
 
 ---
 
-## 11. Changes
+## 5. Local storage on your device
 
-We may update this policy when the App or legal requirements change. We will post the new version in this repository and update the “Last updated” date. Continued use after changes means you accept the updated policy.
+Most of your content (favourites, trips, cache, settings) is stored in a **local database (ObjectBox)** on your phone or tablet. You can **clear cached place data** from settings. Uninstalling the app removes local app data subject to platform backup rules (see below).
 
----
-
-## 12. Contact
-
-**Privacy questions and requests:**
-
-- Open an issue: [github.com/chamberton/Within10-Privacy-Policy/issues](https://github.com/chamberton/Within10-Privacy-Policy/issues)
-
-Please include your platform (iOS/Android), App version (Settings → About), and a clear description of your request.
+**Biometric lock (Face ID / Touch ID / Android biometrics):** If enabled for meetings or sensitive notes, authentication is handled by your **operating system**; we do not receive your biometric data.
 
 ---
 
-## 13. App Store disclosure (short form)
+## 6. Cloud services (Firebase / Google)
 
-**Within 10 (iOS)** is distributed by Apple’s App Store. **Within 10** uses location to find nearby places and optional proximity alerts; contacts access only when you save or invite; local storage for favourites and cache; Google Places for search; Firebase for anonymous trial sync, analytics, and crash reports; **Apple (StoreKit)** / Google Play for subscriptions. No sale of personal data. No in-app ads. See [§10](#10-apple-privacy-and-services-ios) for Apple’s policies and support paths.
+When online, the app may use **Google Firebase**:
+
+| Service | Purpose | Typical data |
+|---------|---------|----------------|
+| **Firebase Authentication** | Anonymous user ID for sync/trial | Anonymous UID, auth tokens |
+| **Cloud Firestore** | Sync favourites and related sync payloads for entitled users | User-scoped documents under `users/{uid}/sync/...` |
+| **Firebase Analytics** | Usage measurement | Events, app version, device class |
+| **Firebase Crashlytics** | Crash diagnostics | Crash logs, device/OS metadata |
+| **Firebase Remote Config** | Feature flags and limits | Config keys, no personal content |
+
+Firebase is operated by **Google LLC**. Data may be processed in the United States or other countries where Google operates. See [Firebase Privacy](https://firebase.google.com/support/privacy).
+
+Crashlytics collection is **disabled in debug/developer builds** where configured; production builds send crash reports to help us fix bugs.
+
+---
+
+## 7. Location — important details
+
+- **When in use:** Location is used to list places around you, sort by distance, and open external map apps for directions.  
+- **Simulated location:** You may set a different point on the map to explore another city; that coordinate is used in place searches sent to Google.  
+- **Background location (optional):** If you enable proximity alerts, the app may access location while in the background (iOS *Background Modes: location*; Android *ACCESS_BACKGROUND_LOCATION* where granted). You can turn this off in system settings or in-app notification settings.  
+- **Geofencing:** We register geofences around saved places to trigger notifications when you enter the configured radius.  
+- **Huawei devices:** On some Android devices without Google Play services, **Huawei location services** may be used for location features instead of or in addition to Google Play services.
+
+We do **not** claim to store your “live GPS trail” on our servers for tracking; location is used to provide features and place API requests as described.
+
+---
+
+## 8. Contacts, photos, and communications
+
+- **Contacts (read/write):** Used only when **you** pick contacts for meeting invites or save a place entry to your address book. We do not upload your full contact list to our servers for marketing.  
+- **Photos:** Place photos are loaded from Google Places or cached locally. **Food insight** uses photos you view in the app and processes them **on-device** with a local model; do not rely on it for medical or allergy decisions (results are AI-generated and may be wrong).  
+- **Email / share sheets:** If you share exports or invitations, delivery goes through **your** chosen apps (Mail, Messages, etc.).
+
+---
+
+## 9. Notifications
+
+With your permission, we send **local notifications** (e.g. proximity to a saved place). Notification content is derived from places **you** saved. You can disable notifications in app or system settings.
+
+---
+
+## 10. Subscriptions and in-app purchases
+
+**Within X Pro** and **Within X Pro Max** are auto-renewing subscriptions processed by **Apple App Store** or **Google Play**. We receive purchase/entitlement status from the store SDK; we do not collect or store your payment card details.
+
+**Restore purchases** uses the store’s restore flow. Legacy “remove ads” products may still restore entitlements for existing buyers.
+
+**In-app review** prompts may be shown via Apple/Google review APIs; no personal review text is sent to us through that API.
+
+---
+
+## 11. Permissions (platform)
+
+Permissions are requested when a feature needs them. Denying a permission may limit that feature but much of the app still works.
+
+### Apple iOS (examples)
+
+| Permission | Why |
+|------------|-----|
+| Location (When In Use / Always) | Nearby places, simulation, proximity alerts |
+| Contacts | Meeting invites, save to contacts |
+| Photo Library | Saving or accessing images where supported |
+| Face ID | Optional lock for meetings/private notes |
+| Notifications | Proximity alerts |
+| App Tracking Transparency | Optional; app works if you deny; we do not use data for ads |
+
+### Google Android (examples)
+
+| Permission | Why |
+|------------|-----|
+| Fine / coarse location | Nearby places and distance |
+| Background location | Optional proximity alerts |
+| Contacts | Meeting invites, save to contacts |
+| Internet / network state | Places API, sync, config |
+| Notifications (Android 13+) | Proximity alerts |
+| Biometric | Optional app/meeting lock |
+| Activity recognition / related | Geofencing reliability on some devices |
+| Storage (legacy paths) | Exports/cache where applicable on older API levels |
+
+Exact permission names may vary by OS version. The system dialog text shown at runtime is authoritative.
+
+---
+
+## 12. Sharing and disclosure
+
+We share information only:
+
+- **With Google** (Places/Maps, Firebase) as needed to operate the app.  
+- **With Apple or Google** for billing and subscription validation.  
+- **With OS services** you invoke (Maps, Phone, Mail, Contacts).  
+- **When required by law**, court order, or to protect rights, safety, and security.  
+- **In connection with a merger or sale** of the app or its assets, with notice where required.
+
+We do **not** share personal information with data brokers or ad networks for advertising.
+
+---
+
+## 13. Retention
+
+- **On device:** Until you delete data in-app, clear cache, or uninstall.  
+- **Firestore sync:** Retained while your anonymous account and sync documents exist; you may request deletion via contact below.  
+- **Analytics / crash logs:** Retained per Google Firebase default retention; used for diagnostics and trend analysis.  
+- **Trial records:** Kept locally and may sync to enforce trial limits.
+
+---
+
+## 14. Security
+
+We use industry-standard measures including encrypted transport (HTTPS), platform secure storage where appropriate (e.g. keychain/Keystore for sensitive tokens), and least-privilege access to cloud data scoped by user ID. No method of transmission or storage is 100% secure.
+
+---
+
+## 15. International transfers
+
+If you use Within 10 outside the country where our service providers host data (including the United States), your information may be transferred internationally. We rely on appropriate safeguards where required (e.g. provider terms and, where applicable, standard contractual clauses via Google/Firebase).
+
+---
+
+## 16. Your rights
+
+Depending on your location, you may have the right to **access**, **correct**, **delete**, **restrict**, **object**, or **port** personal data, and to **withdraw consent** where processing is consent-based.
+
+- **In-app:** Clear cache, delete saved items, revoke permissions in Settings, cancel subscriptions in the App Store / Play Store.  
+- **Contact us** via [https://within10.app](https://within10.app) for access or deletion requests related to cloud sync data tied to your anonymous Firebase user (include app platform and approximate install date to help us locate records).
+
+**California (CCPA/CPRA):** We do not sell personal information. You may request disclosure or deletion as above.
+
+**EEA/UK GDPR:** You may lodge a complaint with your local supervisory authority.
+
+---
+
+## 17. Children
+
+Within 10 is not intended for children under **13** (or the minimum age in your country without parental consent). We do not knowingly collect personal information from children. Contact us if you believe a child has provided data.
+
+---
+
+## 18. Third-party links and maps
+
+The app opens **websites, maps, and review pages** operated by third parties (e.g. Google Maps, business sites). Their privacy practices apply once you leave Within 10 or use their apps.
+
+---
+
+## 19. Changes to this policy
+
+We may update this Privacy Policy from time to time. We will post the revised version with a new **Effective date** and, where required, provide additional notice in the app or store listing. Continued use after changes means you accept the updated policy.
+
+---
+
+## 20. Platform-specific notes
+
+### Apple App Store
+
+- Privacy nutrition labels and App Store Connect disclosures should match this policy.  
+- **Privacy Policy URL** in App Store Connect: [https://within10.app/privacy](https://within10.app/privacy) (or the URL you publish for this document).  
+- **Apple’s Licensed Application End User License Agreement** applies to app use: [Apple Standard EULA](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
+
+### Google Play
+
+- Data safety form should align with sections 3–12 (location, contacts, analytics, crash data, optional background location, no ads).  
+- **Short description / store listing** must remain consistent with this policy.
+
+---
+
+## 21. Contact
+
+For privacy questions, requests, or complaints:
+
+**Within 10**  
+Email: [Email the developer](mailto:chamberton@hotmail.com)  
+Raise and Issue: [Github issues] (https://github.com/chamberton/Within10-Privacy-Policy/issues)
+
+We aim to respond to verified requests within a reasonable time and in accordance with applicable law.
+
+---
+
+*This document is the English master privacy policy for Within 10 on iOS and Android. Store listings in other languages are translations for convenience; if there is a conflict, the English version controls unless local law requires otherwise.*
